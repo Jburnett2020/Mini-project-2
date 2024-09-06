@@ -63,10 +63,10 @@ body {
 .box {
   background-image: url('https://media.giphy.com/media/NfzERYyiWcXU4/giphy.gif');
   background-repeat: no-repeat;
-  background-size: 1000px 1000px; 
+  background-size: 500px 500px; 
   position: relative;
-  height: 125px;
-  width: 125px;
+  height: 480px;
+  width: 379px;
   transition: 0.4s ease;
 }
 
