@@ -63,7 +63,7 @@ body {
 .box {
   background-image: url('https://media.giphy.com/media/NfzERYyiWcXU4/giphy.gif'); /* Updated GIF URL */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; /* Adjusted to fit the box */
   position: relative;
   height: 125px;
   width: 125px;
@@ -82,7 +82,7 @@ body {
 }
 
 .box::before {
-  content: '';
+  content:'';
   background-color: #24f964;
   position: absolute;
   bottom: -15px;
