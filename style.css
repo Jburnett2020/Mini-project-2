@@ -61,9 +61,9 @@ body {
 }
 
 .box {
-  background-image: url('https://media.giphy.com/media/NfzERYyiWcXU4/giphy.gif'); /* Updated GIF URL */
+  background-image: url('https://media.giphy.com/media/NfzERYyiWcXU4/giphy.gif');
   background-repeat: no-repeat;
-  background-size: cover; /* Adjusted to fit the box */
+  background-size: 500px 500px; /* Ensure the GIF covers the entire grid */
   position: relative;
   height: 125px;
   width: 125px;

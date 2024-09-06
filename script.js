@@ -15,8 +15,8 @@ function createBoxes() {
       const box = document.createElement('div');
       // Add the 'box' class to the new div
       box.classList.add('box');
-      // Set the background position for each box based on its position in the grid
-      // This assumes each box is part of a larger background image or sprite sheet
+      // Set the background image to the GIF and adjust the position based on grid
+      box.style.backgroundImage = "url('https://giphy.com/embed/NfzERYyiWcXU4.gif')";
       box.style.backgroundPosition = `${-j * 125}px ${-i * 125}px`;
       // Append the box to the gridContainer
       gridContainer.appendChild(box);
