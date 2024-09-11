@@ -1,93 +1,105 @@
+/* Importing 'Roboto' and 'Poppins' fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Applying box-sizing to include padding and border in the total width and height of elements */
 * {
   box-sizing: border-box;
 }
 
+/* Body styling: light background, center alignment, and full viewport height */
 body {
-  background-color: #fafafa;
-  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;  /* Light gray background */
+  font-family: 'Roboto', sans-serif;  /* Using 'Roboto' font */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
+  height: 100vh;  /* Full height of the viewport */
+  overflow: hidden;  /* Hide overflow content */
 }
 
+/* Button with magic class: purple background, white text, and fixed position */
 .magic {
-  background-color: #e024f9;
-  color: #fff;
-  font-family: 'Poppins', sans-serif;
-  border: 0;
-  border-radius: 3px;
-  font-size: 16px;
-  padding: 12px 20px;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  letter-spacing: 1px;
-  box-shadow: 0 3px rgba(36, 57, 249, 0.5);
-  z-index: 100;
+  background-color: #e024f9;  /* Bright purple background color */
+  color: #fff;  /* White text color */
+  font-family: 'Poppins', sans-serif;  /* Using 'Poppins' font */
+  border: 0;  /* No border */
+  border-radius: 3px;  /* Slightly rounded corners */
+  font-size: 16px;  /* Standard font size */
+  padding: 12px 20px;  /* Padding inside the button */
+  cursor: pointer;  /* Pointer cursor on hover */
+  position: fixed;  /* Fixed position on the page */
+  top: 20px;  /* Positioning the button from the top */
+  letter-spacing: 1px;  /* Adding space between letters */
+  box-shadow: 0 3px rgba(36, 57, 249, 0.5);  /* Box shadow for a 3D effect */
+  z-index: 100;  /* Ensures the button stays above other elements */
 }
 
+/* Remove outline when the button is focused */
 .magic:focus {
   outline: none;
 }
 
+/* Styling when the button is pressed: no shadow and slight downward movement */
 .magic:active {
-  box-shadow: none;
-  transform: translateY(2px);
+  box-shadow: none;  /* Removing shadow on click */
+  transform: translateY(2px);  /* Button moves down 2px on click */
 }
 
+/* Styling for a container of boxes: flexbox layout, spacing, and transition */
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  height: 500px;
-  width: 500px;
-  position: relative;
-  transition: 0.4s ease;
+  display: flex;  /* Flexbox layout for arranging boxes */
+  flex-wrap: wrap;  /* Allows boxes to wrap to the next line */
+  justify-content: space-around;  /* Space between boxes */
+  height: 500px;  /* Fixed height for the container */
+  width: 500px;  /* Fixed width for the container */
+  position: relative;  /* Positioned relative for child elements */
+  transition: 0.4s ease;  /* Smooth transition for size changes */
 }
 
+/* Enlarging the boxes container with the big class */
 .boxes.big {
-  width: 600px;
-  height: 600px;
+  width: 600px;  /* Increased width */
+  height: 600px;  /* Increased height */
 }
 
+/* Rotation animation for the boxes inside the larger container */
 .boxes.big .box {
-  transform: rotateZ(360deg);
+  transform: rotateZ(360deg);  /* Full 360-degree rotation */
 }
 
+/* Styling for individual box elements with an animated background */
 .box {
-  background-image: url('https://media.giphy.com/media/NfzERYyiWcXU4/giphy.gif');
-  background-repeat: no-repeat;
-  background-size: 500px 500px; 
-  position: relative;
-  height: 480px;
-  width: 379px;
-  transition: 0.4s ease;
+  background-image: url('https://media.giphy.com/media/NfzERYyiWcXU4/giphy.gif');  /* GIF background */
+  background-repeat: no-repeat;  /* Prevents background from repeating */
+  background-size: 500px 500px;  /* Sets the size of the background image */
+  position: relative;  /* Positioned relative for pseudo-elements */
+  height: 480px;  /* Fixed height */
+  width: 379px;  /* Fixed width */
+  transition: 0.4s ease;  /* Smooth transition for any changes */
 }
 
+/* Adding a decorative element on the right side of the box */
 .box::after {
-  content: '';
-  background-color: #8df6c5;
-  position: absolute;
-  top: 8px;
-  right: -15px;
-  height: 100%;
-  width: 15px;
-  transform: skewY(45deg);
+  content: '';  /* Empty content for the pseudo-element */
+  background-color: #8df6c5;  /* Light green color */
+  position: absolute;  /* Positioned absolutely inside the box */
+  top: 8px;  /* Positioned slightly from the top */
+  right: -15px;  /* Positioned to the right outside the box */
+  height: 100%;  /* Full height of the box */
+  width: 15px;  /* Fixed width */
+  transform: skewY(45deg);  /* Skew the element for a 3D effect */
 }
 
+/* Adding a decorative element on the bottom side of the box */
 .box::before {
-  content:'';
-  background-color: #24f964;
-  position: absolute;
-  bottom: -15px;
-  left: 8px;
-  height: 15px;
-  width: 100%;
-  transform: skewX(45deg);
+  content: '';  /* Empty content for the pseudo-element */
+  background-color: #24f964;  /* Bright green color */
+  position: absolute;  /* Positioned absolutely inside the box */
+  bottom: -15px;  /* Positioned below the box */
+  left: 8px;  /* Positioned slightly from the left */
+  height: 15px;  /* Fixed height */
+  width: 100%;  /* Full width */
+  transform: skewX(45deg);  /* Skew the element for a 3D effect */
 }
